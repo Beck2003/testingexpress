@@ -4,6 +4,10 @@ const port = process.env.PORT || 3005;
 
 app.use(express.static('stuff'));
 
+app.get(/i*fly$/, (req,res)=>{
+    res.send(`\nit is true\n`)
+})
+
 app.get(/i*apple$/, (req, res)=>{
     res.send('\nWe have an apple for you\n')
 })
